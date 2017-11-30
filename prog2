@@ -1,7 +1,32 @@
 #!/bin/bash
 
+echo "Verifying first five lines received" > received.txt
+read line
+echo "1:$line" >> received.txt
+read line
+echo "2:$line" >> received.txt
+read line
+echo "3:$line" >> received.txt
+read line
+echo "4:$line" >> received.txt
+read line
+echo "5:$line" >> received.txt
 sleep 2
 echo 18
+echo "Verifying next four lines received" >> received.txt
+read line
+echo "6:$line" >> received.txt
+read line
+echo "7:$line" >> received.txt
+read line
+echo "8:$line" >> received.txt
+read line
+echo "9:$line" >> received.txt
 sleep 2
 echo 33
+echo "Do we get end?" >> received.txt
+read line
+# likely get killed before we write this line
+echo "10:$line" >> received.txt
 sleep 2
+echo "Do we get get killed before writing this line?" >> received.txt

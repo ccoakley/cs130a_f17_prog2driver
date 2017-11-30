@@ -39,6 +39,7 @@ def run_test(test):
         else:
             print("Sending: {}".format(line.strip()))
             program.stdin.write(line)
+            program.stdin.flush()            
             if line.strip() == "END":
                 # not going to wait on exit
                 if not program.poll():
